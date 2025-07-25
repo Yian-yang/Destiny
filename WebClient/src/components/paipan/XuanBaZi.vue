@@ -120,6 +120,22 @@
               <el-collapse-item title="高级选项" name="1">
                 <div class="other">
                   <div class="title">
+                    闰月
+                  </div>
+                  <div class="kuang">
+                    <el-radio-group v-model="leapMonthType">
+                      <el-radio-button
+                        v-for="item in leapMonthTypeOptions"
+                        :key="item.value"
+                        :label="item.label"
+                        :value="item.value"
+                      />
+                    </el-radio-group>
+                  </div>
+                </div>
+
+                <div class="other">
+                  <div class="title">
                     大运轮数
                   </div>
                   <div class="kuang">

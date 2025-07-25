@@ -93,6 +93,10 @@ body {
                         margin: 0;
                     }
 
+                    .leapMonth {
+                        display: none !important;
+                    }
+
                     .date {
                         margin: 30px 0 15px 0;
                         clear: both;
@@ -1279,7 +1283,7 @@ body {
 // 高级选项样式修改
 .el-collapse {
     background-color: black;
-    margin-bottom: 20px; // 增加与开始排盘按钮的间距
+    margin-bottom: 20px !important; // 增加与开始排盘按钮的间距
 }
 
 ::v-deep(.el-collapse-item__wrap) {
