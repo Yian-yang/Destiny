@@ -1,0 +1,1250 @@
+body {
+    background-color: #000000 !important;
+}
+
+.vue {
+
+    .region {
+        width: 100%;
+        height: 100px;
+        text-align: center;
+        margin-bottom: 10px;
+        color: #ffffff;
+        background: linear-gradient(to right, #1a1a1a, #2d2d2d, #1a1a1a);
+
+        .header1 {
+            font-size: 26px;
+        }
+
+        .header2 {
+            margin-top: 0px;
+            font-size: 15px;
+            line-height: 30px;
+        }
+    }
+
+    .data {
+        width: 1300px;
+        margin: 0 auto;
+
+        .nodata {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 620px;
+
+            video {
+                display: none;
+            }
+
+            .option {
+                width: 400px;
+                height: 620px;
+                border: none;
+                padding: 10px 15px 10px 15px;
+                text-align: left;
+                background-color: transparent;
+                color: #ffffff;
+
+                .title {
+                    color: #ffffff;
+                    font-size: 20px;
+                    margin-bottom: 10px;
+
+                    .type {
+                        float: right;
+                    }
+                }
+
+                .item {
+
+                    .name {
+                        margin: 0px 0 0 0;
+                    }
+
+                    .occupy {
+                        margin: 10px 0 0 0;
+                        display: none;
+                    }
+
+                    .dateType {
+                        float: left;
+                        margin: 10px 0 15px 0;
+                    }
+
+                    .sex {
+                        float: right;
+                        margin: 10px 0 15px 0;
+                    }
+
+                    .date {
+                        margin: 65px 0 20px 0;
+
+                        .el-date-picker {
+                            width: 60% !important;
+                        }
+
+                        .leapMonth {
+                            float: right;
+                        }
+                    }
+
+                    .other {
+                        height: 45px;
+                        display: flex;
+                        float: left;
+
+                        .title {
+                            flex: 1;
+                            font-size: 15px;
+                            margin: 3px 10px 0px 0px;
+                        }
+
+
+                        .kuang {
+                            flex: 1;
+
+                            .select {
+                                width: 290px;
+                            }
+                        }
+
+                    }
+
+                    .paipan {
+                        .button {
+                            font-size: 16px;
+                            font-weight: bold;
+                            width: 100%;
+                            height: 40px;
+                            border-radius: 40px;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        .yesdata {
+            .option {
+                .button {
+                    margin-right: 30px;
+                }
+
+                .button2 {
+                    margin-left: 30px;
+                }
+            }
+
+            .data {
+                margin-top: 10px;
+
+                .hrader {
+                    width: 100%;
+                    border: none;
+                    color: white;
+                    height: 50px;
+                    line-height: 50px;
+                    font-size: 16px;
+                    margin-bottom: 10px;
+                    padding: 0 30px 0 30px;
+                    font-weight: bold;
+                    border-radius: 5px;
+                    background-size: cover;
+                    animation: imgAnimation 5s infinite steps(100);
+
+                    @keyframes imgAnimation {
+                        0% {
+                            background-image: url(@/assets/img/headerfooter/top1.png);
+                        }
+
+                        50% {
+                            background-image: url(@/assets/img/headerfooter/top2.png);
+                        }
+
+                        100% {
+                            background-image: url(@/assets/img/headerfooter/top1.png);
+                        }
+                    }
+
+                    .name {
+                        float: left;
+                        font-size: 24px;
+                    }
+
+                    .date {
+                        float: left;
+                        font-size: 16px;
+
+                        .other {
+                            font-size: 14px;
+                        }
+
+                        .item {
+                            font-size: 14px;
+                            margin-left: 40px;
+                        }
+                    }
+
+                    .shengxiao {
+                        float: right;
+                        height: 60px;
+                        font-size: 20px;
+                        color: #c39d4a;
+                    }
+                }
+
+                .border {
+                    width: 100%;
+                    border-radius: 5px;
+                    border: none;
+                    padding: 5px;
+                    min-height: 520px;
+                    border: 2px #333 solid;
+
+                    .jichu {
+                        .bgi1 {
+                            background-image: linear-gradient(to right, #1a1a1a, #2d2d2d, #1a1a1a);
+                        }
+
+                        .bgi2 {
+                            background-image: linear-gradient(to right, #2d2d2d, #1a1a1a, #2d2d2d);
+                        }
+
+                        .bgi3 {
+                            margin: 10px 0 10px 0;
+                            border: 1px #444 solid;
+                            background-color: rgba(40, 40, 40, 0.8);
+
+                            .item {
+                                .content {
+                                    font-weight: bold;
+                                    font-size: 16px;
+                                    margin-left: 40%;
+                                    color: #ffffff;
+                                }
+                            }
+                        }
+
+                        .go {
+                            display: flex;
+                            padding-left: 10px;
+                            height: 30px;
+                            line-height: 30px;
+
+                            .item {
+                                flex: 1;
+                                display: flex;
+
+                                .title {
+                                    color: #727272;
+                                    font-weight: bold;
+                                    margin-right: 15px;
+                                }
+
+                                .mr-43 {
+                                    margin-right: 43px;
+                                }
+
+                                .mr-29 {
+                                    margin-right: 29px;
+                                }
+                            }
+                        }
+
+                        .caihua {
+                            float: left;
+                            width: 50%;
+                            height: 200px;
+                            margin-top: 10px;
+                            padding: 5px;
+                            border: 1px rgb(220, 220, 220) solid;
+
+                            .tab {
+                                margin-top: -5px;
+                                height: 140px;
+                                overflow-y: auto;
+
+                                .jianju {
+                                    float: left;
+                                    width: 50%;
+                                    line-height: 27px;
+
+                                    .tag {
+                                        border-radius: 50px;
+                                        height: 15px;
+                                        line-height: 15px;
+                                        cursor: default;
+                                    }
+                                }
+                            }
+
+                            .tips {
+                                text-align: center;
+                                margin-top: 5px;
+                                font-size: 12px;
+                                color: rgb(160, 160, 160);
+                            }
+                        }
+
+                        .wuxinghsu {
+                            float: right;
+                            width: 50%;
+                            height: 200px;
+                            margin-top: 10px;
+                            padding: 5px;
+                            border: 1px rgb(220, 220, 220) solid;
+                            border-left: none;
+
+                            .title {
+                                float: left;
+                                line-height: 35px;
+                                color: #727272;
+                                font-weight: bold;
+                                margin-right: 15px;
+                            }
+
+                            .switch {
+                                float: right;
+                                line-height: 35px;
+                            }
+
+                            .divider {
+                                margin: 39px 0 -20px 0;
+                            }
+
+                            .progress {
+                                line-height: 26px;
+
+                                .count {
+                                    font-size: 13px;
+                                }
+                            }
+                        }
+
+                        .wangshuai {
+                            height: 30px;
+                            line-height: 25px;
+                            margin: 220px 0 10px 0;
+                            border-radius: 10px;
+                            border: solid;
+                            display: flex;
+                            animation: wangshuaiAnimation 2s linear infinite;
+
+                            .item {
+                                flex: 1;
+                                display: flex;
+
+                                .title {
+                                    font-size: 17px;
+                                    color: #727272;
+                                    padding-left: 40%;
+                                }
+                            }
+                        }
+
+                        @keyframes wangshuaiAnimation {
+                            0% {
+                                border-image: linear-gradient(to right, rgb(255, 255, 160) 0%, rgb(160, 255, 255), rgb(255, 160, 255) 100%);
+                                border-image-slice: 1;
+                                border-width: 2px;
+                                border-radius: 10px;
+                            }
+
+                            50% {
+                                border-image: linear-gradient(to right, rgb(255, 160, 255) 0%, rgb(0, 217, 255), rgb(255, 255, 91) 100%);
+                                border-image-slice: 1;
+                                border-width: 2px;
+                                border-radius: 10px;
+                            }
+
+                            100% {
+                                border-image: linear-gradient(to right, rgb(255, 255, 160) 0%, rgb(160, 255, 255), rgb(255, 160, 255)100%);
+                                border-image-slice: 1;
+                                border-width: 2px;
+                                border-radius: 10px;
+                            }
+                        }
+
+                        .ganzhiguanxi {
+                            border: 1px rgb(220, 220, 220) solid;
+                            padding: 10px;
+
+                            .title {
+                                color: #d4af37;
+                                font-weight: bold;
+                            }
+
+                            .mb {
+                                margin-bottom: 10px;
+                            }
+
+                            .null {
+                                color: rgb(150, 150, 150);
+                            }
+
+                            .tj {
+                                text-align: center;
+                                margin: 15px 0 0 0;
+                                font-size: 16px;
+                                color: rgb(167, 130, 57);
+                            }
+                        }
+                    }
+
+                    .mingpan {
+
+                        .mingpan-left {
+                            text-align: center;
+                            min-height: 500px;
+                            border: 1px rgb(220, 220, 220) solid;
+
+                            .bgi1 {
+                                background-color: rgb(254, 254, 254);
+                            }
+
+                            .bgi2 {
+                                background-image: linear-gradient(to right, rgb(255, 248, 241), rgb(245, 251, 255), rgb(236, 243, 254));
+                            }
+
+                            .borl {
+                                border-left: 1px rgb(220, 220, 220) solid;
+                            }
+
+                            .go {
+                                display: flex;
+                                padding: 3px 0 3px 0;
+
+                                .item {
+                                    flex: 1;
+
+                                    .title {
+                                        color: #cccccc;
+                                    }
+
+                                    .content {
+                                        .ganzhi {
+                                            font-size: 20px;
+                                        }
+
+                                        .canggan {
+                                            line-height: 17px;
+                                        }
+
+                                        .fuxing {
+                                            line-height: 17px;
+                                        }
+
+                                        .shensha {
+                                            font-size: 13px;
+                                            line-height: 17px;
+                                            color: #5cb3e5;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .mingpan-right {
+                            border: 1px rgb(220, 220, 220) solid;
+
+                            .duanyun {
+                                font-family: 楷体;
+                                font-size: 14px;
+                                text-align: center;
+                                font-weight: bold;
+
+                                .item1 {
+                                    height: 36px;
+                                    line-height: 17px;
+                                    border-bottom: 1px rgb(232, 234, 236) solid;
+                                    background-image: linear-gradient(to right, rgb(243, 248, 255), rgb(252, 252, 254), rgb(243, 248, 255));
+                                }
+                            }
+
+                            .qiyun {
+                                margin: 0 0 0 0;
+                                padding: 0px 0px 1px 10px;
+                                border-bottom: 1px rgb(220, 220, 220) solid;
+
+                                .title {
+                                    color: rgb(160, 160, 160);
+                                }
+
+                                .mingpanmode {
+                                    float: right;
+                                    margin: -36px 10px 0 0;
+                                }
+                            }
+
+                            .max-height {
+                                min-height: 455px;
+                                max-height: 553px;
+                                overflow-x: hidden;
+                                overflow-y: auto;
+
+
+                                .daYunLiuNianMode {
+                                    zoom: .7;
+                                    margin: 10px 0px -40px 0px;
+                                }
+
+                                .dayunliunian1 {
+                                    height: 93px;
+                                    margin: 5px 0 0 0;
+
+                                    .huxi {
+                                        .icon {
+                                            margin-top: -80px;
+                                        }
+                                    }
+
+                                    @keyframes huxiAnimation {
+                                        0% {
+                                            background-color: #ffffff;
+                                        }
+
+                                        50% {
+                                            background-color: #e9faff;
+                                        }
+
+                                        100% {
+                                            background-color: #ffffff;
+                                        }
+                                    }
+
+                                    .title {
+                                        float: left;
+                                        width: 5%;
+                                        height: 89px;
+                                        text-align: center;
+                                        color: rgb(160, 160, 160);
+                                        border: 1px rgb(220, 220, 220) solid;
+                                        border-left: none;
+
+                                        .item {
+                                            font-size: 18px;
+                                            line-height: 30px;
+                                            margin-top: 15px;
+                                        }
+                                    }
+
+                                    .content {
+                                        float: left;
+                                        width: 95%;
+                                        height: 89px;
+                                        text-align: center;
+                                        border: 1px rgb(220, 220, 220) solid;
+                                        border-left: none;
+                                        border-right: none;
+
+                                        .item {
+                                            width: 100%;
+                                            border: none;
+                                            overflow-x: auto;
+                                            overflow-y: hidden;
+                                            white-space: nowrap;
+                                            display: flex;
+                                            border-radius: 0;
+                                            font-size: 13px;
+                                            background-color: rgba(255, 255, 255, 0);
+
+                                            .one-yes {
+                                                font-weight: bold;
+                                                padding: 0 5px 0 5px;
+                                                height: 88px;
+                                                min-width: 60px;
+                                                float: left;
+                                                text-align: center;
+                                                border: 1px rgb(220, 220, 220) solid;
+                                                border-left: none;
+                                                border-top: none;
+                                                background-color: rgb(252, 246, 239);
+
+                                                .age {
+                                                    font-size: 12px;
+                                                }
+
+                                                .age2 {
+                                                    font-size: 11px;
+                                                    margin: 1px 0 1px 0;
+                                                }
+
+                                                .year {
+                                                    font-size: 12px;
+                                                }
+
+                                                .ganZhi {}
+
+                                                .shiShen {
+                                                    width: 100%;
+                                                    margin: 3px 0 33px 0;
+
+                                                    .l {
+                                                        width: 50%;
+                                                        float: left;
+                                                        text-align: right;
+                                                        padding-right: 2px;
+                                                        line-height: 13px;
+                                                    }
+
+                                                    .r {
+                                                        width: 50%;
+                                                        float: left;
+                                                        text-align: left;
+                                                        padding-left: 2px;
+                                                        line-height: 13px;
+                                                    }
+                                                }
+
+                                                .xiaoyun {
+                                                    font-weight: bold;
+                                                    font-size: 18px;
+                                                    line-height: 24px;
+                                                    color: rgb(160, 160, 160);
+                                                }
+                                            }
+
+                                            .one-no {
+                                                transition: .3s;
+                                                padding: 0 5px 0 5px;
+                                                height: 88px;
+                                                min-width: 60px;
+                                                float: left;
+                                                text-align: center;
+                                                border: 1px rgb(220, 220, 220) solid;
+                                                border-left: none;
+                                                border-top: none;
+                                                cursor: pointer;
+                                                background-color: rgb(252, 253, 255);
+
+                                                .age {
+                                                    font-size: 12px;
+                                                }
+
+                                                .age2 {
+                                                    font-size: 11px;
+                                                    margin: 1px 0 1px 0;
+                                                }
+
+                                                .year {
+                                                    font-size: 12px;
+                                                }
+
+                                                .ganZhi {}
+
+                                                .shiShen {
+                                                    width: 100%;
+                                                    margin: 3px 0 33px 0;
+
+                                                    .l {
+                                                        width: 50%;
+                                                        float: left;
+                                                        text-align: right;
+                                                        padding-right: 2px;
+                                                        line-height: 13px;
+                                                    }
+
+                                                    .r {
+                                                        width: 50%;
+                                                        float: left;
+                                                        text-align: left;
+                                                        padding-left: 2px;
+                                                        line-height: 13px;
+                                                    }
+                                                }
+
+                                                .xiaoyun {
+                                                    font-weight: bold;
+                                                    font-size: 18px;
+                                                    color: rgb(160, 160, 160);
+                                                    line-height: 24px;
+                                                }
+                                            }
+
+                                            .one-no:hover {
+                                                transition: .3s;
+                                                background-color: rgb(245, 245, 245);
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .xiaoyun1 {
+                                    height: 57px;
+                                    margin: 5px 0 0 0;
+
+                                    .title {
+                                        float: left;
+                                        width: 5%;
+                                        height: 53px;
+                                        text-align: center;
+                                        color: rgb(160, 160, 160);
+                                        border: 1px rgb(220, 220, 220) solid;
+                                        border-left: none;
+
+                                        .item {
+                                            font-size: 18px;
+                                            line-height: 22px;
+                                            margin-top: 3px;
+                                        }
+                                    }
+
+                                    .content {
+                                        float: left;
+                                        width: 95%;
+                                        height: 53px;
+                                        text-align: center;
+                                        border: 1px rgb(220, 220, 220) solid;
+                                        border-left: none;
+                                        border-right: none;
+
+                                        .item {
+                                            width: 100%;
+                                            border: none;
+                                            background-color: rgba(255, 255, 255, 0);
+                                            overflow-x: auto;
+                                            overflow-y: hidden;
+                                            white-space: nowrap;
+                                            display: flex;
+                                            border-radius: 0;
+                                            font-size: 13px;
+
+                                            .one-yes {
+                                                font-weight: bold;
+                                                padding: 0 5px 0 5px;
+                                                height: 52px;
+                                                min-width: 60px;
+                                                float: left;
+                                                text-align: center;
+                                                border: 1px rgb(220, 220, 220) solid;
+                                                border-left: none;
+                                                border-top: none;
+                                                background-color: rgb(252, 246, 239);
+
+                                                .age {
+                                                    font-size: 12px;
+                                                }
+
+                                                .year {
+                                                    font-size: 12px;
+                                                }
+
+                                                .ganZhi {}
+
+                                                .shiShen {
+                                                    width: 100%;
+                                                    margin: 3px 0 33px 0;
+
+                                                    .l {
+                                                        width: 50%;
+                                                        float: left;
+                                                        text-align: right;
+                                                        padding-right: 2px;
+                                                        line-height: 13px;
+                                                    }
+
+                                                    .r {
+                                                        width: 50%;
+                                                        float: left;
+                                                        text-align: left;
+                                                        padding-left: 2px;
+                                                        line-height: 13px;
+                                                    }
+                                                }
+                                            }
+
+                                            .one-no {
+                                                transition: .3s;
+                                                padding: 0 5px 0 5px;
+                                                height: 52px;
+                                                min-width: 60px;
+                                                float: left;
+                                                text-align: center;
+                                                border: 1px rgb(220, 220, 220) solid;
+                                                border-left: none;
+                                                border-top: none;
+                                                cursor: pointer;
+                                                background-color: rgb(252, 253, 255);
+
+                                                .age {
+                                                    font-size: 12px;
+                                                }
+
+                                                .year {
+                                                    font-size: 12px;
+                                                }
+
+                                                .ganZhi {}
+
+                                                .shiShen {
+                                                    width: 100%;
+                                                    margin: 3px 0 33px 0;
+
+                                                    .l {
+                                                        width: 50%;
+                                                        float: left;
+                                                        text-align: right;
+                                                        padding-right: 2px;
+                                                        line-height: 13px;
+                                                    }
+
+                                                    .r {
+                                                        width: 50%;
+                                                        float: left;
+                                                        text-align: left;
+                                                        padding-left: 2px;
+                                                        line-height: 13px;
+                                                    }
+                                                }
+                                            }
+
+                                            .one-no:hover {
+                                                transition: .3s;
+                                                background-color: rgb(245, 245, 245);
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .dayunliunian2 {
+                                    min-height: 270px;
+                                    margin: 5px 0 0 0;
+
+                                    .huxi {
+                                        .icon {
+                                            margin-top: -272px;
+                                        }
+                                    }
+
+                                    @keyframes huxiAnimation {
+                                        0% {
+                                            background-color: #ffffff;
+                                        }
+
+                                        50% {
+                                            background-color: #e9faff;
+                                        }
+
+                                        100% {
+                                            background-color: #ffffff;
+                                        }
+                                    }
+
+                                    .title {
+                                        float: left;
+                                        width: 5%;
+                                        height: 265px;
+                                        text-align: center;
+                                        color: rgb(160, 160, 160);
+                                        border: 1px rgb(220, 220, 220) solid;
+                                        border-left: none;
+
+                                        .item {
+                                            font-size: 18px;
+                                            line-height: 100px;
+                                            margin-top: 32px;
+                                        }
+                                    }
+
+                                    .title2 {
+                                        float: left;
+                                        width: 10%;
+                                        height: 265px;
+                                        text-align: center;
+                                        color: rgb(160, 160, 160);
+                                        border: 1px rgb(220, 220, 220) solid;
+                                        border-left: none;
+                                        font-size: 13px;
+
+                                        .nianling {
+                                            height: 20px;
+                                        }
+
+                                        .nianling2 {
+                                            height: 20px;
+                                            line-height: 20px;
+                                            font-size: 11px !important;
+                                        }
+
+                                        .nianfen {
+                                            height: 20px;
+                                            background-color: #f1f6ff;
+                                        }
+
+                                        .zhuxing {
+                                            height: 20px;
+                                        }
+
+                                        .tiangan {
+                                            height: 20px;
+                                            margin-top: 1px;
+                                            background-color: #f1f6ff;
+                                        }
+
+                                        .dizhi {
+                                            height: 20px;
+                                        }
+
+                                        .canggan {
+                                            height: 40px;
+                                            margin-top: 1px;
+                                            background-color: #f1f6ff;
+                                        }
+
+                                        .fuxing {
+                                            margin-top: 1px;
+                                            height: 40px;
+                                        }
+
+                                        .zizuo {
+                                            height: 20px;
+                                            margin-top: 1px;
+                                            background-color: #f1f6ff;
+                                        }
+
+                                        .xingyun {
+                                            height: 20px;
+                                        }
+
+                                        .kongwang {
+                                            height: 20px;
+                                            margin-top: 1px;
+                                            background-color: #f1f6ff;
+                                        }
+
+                                        .nayin {
+                                            height: 20px;
+                                        }
+                                    }
+
+                                    .content {
+                                        float: left;
+                                        width: 85%;
+                                        height: 265px;
+                                        text-align: center;
+                                        border: 1px rgb(220, 220, 220) solid;
+                                        border-left: none;
+                                        border-right: none;
+
+                                        .item {
+
+                                            width: 100%;
+                                            border: none;
+                                            overflow-x: auto;
+                                            overflow-y: hidden;
+                                            white-space: nowrap;
+                                            display: flex;
+                                            border-radius: 0;
+                                            font-size: 13px;
+                                            background-color: rgba(255, 255, 255, 0);
+
+                                            .one-yes {
+                                                font-weight: bold;
+                                                min-height: 264.5px;
+                                                min-width: 60px;
+                                                text-align: center;
+                                                border: 1px rgb(220, 220, 220) solid;
+                                                border-left: none;
+                                                border-top: none;
+                                                background-color: rgb(252, 246, 239);
+
+                                                .age {
+
+                                                    height: 20px;
+                                                    line-height: 21px;
+                                                    font-size: 12px;
+                                                }
+
+                                                .year {
+                                                    height: 20px;
+                                                    line-height: 21px;
+                                                    font-size: 12px;
+                                                    border-top: 1px rgb(220, 220, 220) solid;
+                                                    border-bottom: 1px rgb(220, 220, 220) solid;
+                                                }
+
+                                                .zhuXing {
+                                                    height: 20px;
+                                                }
+
+                                                .gan {
+                                                    height: 20px;
+                                                    border-top: 1px rgb(220, 220, 220) solid;
+                                                    border-bottom: 1px rgb(220, 220, 220) solid;
+
+                                                    .sx {
+                                                        font-size: 12px;
+                                                    }
+                                                }
+
+                                                .zhi {
+                                                    height: 20px;
+
+                                                    .sx {
+                                                        font-size: 12px;
+                                                    }
+                                                }
+
+                                                .cangGan {
+                                                    height: 40px;
+                                                    font-size: 11px;
+                                                    line-height: 12px;
+                                                    padding-top: 0px;
+                                                    border-top: 1px rgb(220, 220, 220) solid;
+                                                    border-bottom: 1px rgb(220, 220, 220) solid;
+                                                }
+
+                                                .fuXing {
+                                                    font-size: 11px;
+                                                    height: 42px;
+                                                    line-height: 12px;
+                                                    padding-top: 3px;
+                                                }
+
+                                                .ziZuo {
+                                                    height: 20px;
+                                                    border-top: 1px rgb(220, 220, 220) solid;
+                                                    border-bottom: 1px rgb(220, 220, 220) solid;
+                                                }
+
+                                                .xingYun {
+                                                    height: 20px;
+                                                }
+
+                                                .kongWang {
+                                                    height: 20px;
+                                                    border-top: 1px rgb(220, 220, 220) solid;
+                                                    border-bottom: 1px rgb(220, 220, 220) solid;
+                                                }
+
+                                                .naYin {
+                                                    height: 20px;
+                                                }
+
+                                                .xiaoyun {
+                                                    font-size: 18px;
+                                                    font-weight: bold;
+                                                    line-height: 100px;
+                                                    margin-top: -4px;
+                                                    color: rgb(160, 160, 160);
+                                                }
+                                            }
+
+                                            .one-no {
+                                                transition: .3s;
+                                                min-height: 264.5px;
+                                                min-width: 60px;
+                                                text-align: center;
+                                                border: 1px rgb(220, 220, 220) solid;
+                                                border-left: none;
+                                                border-top: none;
+                                                cursor: pointer;
+                                                background-color: rgb(252, 253, 255);
+
+                                                .age {
+                                                    height: 20px;
+                                                    line-height: 21px;
+                                                    font-size: 12px;
+                                                }
+
+                                                .year {
+                                                    height: 20px;
+                                                    line-height: 21px;
+                                                    font-size: 12px;
+                                                    background-color: #f1f6ff;
+                                                }
+
+                                                .zhuXing {
+                                                    height: 20px;
+                                                }
+
+                                                .gan {
+                                                    height: 20px;
+                                                    background-color: #f1f6ff;
+
+                                                    .sx {
+                                                        font-size: 12px;
+                                                    }
+                                                }
+
+                                                .zhi {
+                                                    height: 20px;
+
+                                                    .sx {
+                                                        font-size: 12px;
+                                                    }
+                                                }
+
+                                                .cangGan {
+                                                    font-size: 11px;
+                                                    height: 40px;
+                                                    font-size: 11px;
+                                                    line-height: 12px;
+                                                    padding-top: 2px;
+                                                    background-color: #f1f6ff;
+                                                }
+
+                                                .fuXing {
+                                                    font-size: 11px;
+                                                    height: 42px;
+                                                    line-height: 12px;
+                                                    padding-top: 3px;
+                                                }
+
+                                                .ziZuo {
+                                                    height: 20px;
+                                                    background-color: #f1f6ff;
+                                                }
+
+                                                .xingYun {
+                                                    height: 20px;
+                                                }
+
+                                                .kongWang {
+                                                    height: 20px;
+                                                    background-color: #f1f6ff;
+                                                }
+
+                                                .naYin {
+                                                    height: 20px;
+                                                }
+
+                                                .xiaoyun {
+                                                    font-size: 18px;
+                                                    font-weight: bold;
+                                                    line-height: 100px;
+                                                    margin-top: -4px;
+                                                    color: rgb(160, 160, 160);
+                                                }
+                                            }
+
+                                            .one-no:hover {
+                                                transition: .3s;
+                                                background-color: rgb(245, 245, 245);
+                                            }
+                                        }
+                                    }
+                                }
+
+                            }
+
+                        }
+
+                        .ganzhiguanxi {
+                            margin-top: 10px;
+                            border: 1px rgb(220, 220, 220) solid;
+                            padding: 10px;
+
+                            .title {
+                                color: rgb(167, 130, 57);
+                                font-weight: bold;
+                            }
+
+                            .mb {
+                                margin-bottom: 10px;
+                            }
+
+                            .null {
+                                color: rgb(150, 150, 150);
+                            }
+
+                            .tj {
+                                text-align: center;
+                                margin: 15px 0 0 0;
+                                font-size: 16px;
+                                color: rgb(167, 130, 57);
+                            }
+                        }
+                    }
+
+                    .gengduo {
+                        .bgi1 {
+                            background-image: linear-gradient(to right, rgb(235, 245, 254), rgb(249, 252, 254), rgb(235, 245, 254));
+                        }
+
+                        .bgi2 {
+                            background-image: linear-gradient(to right, rgb(249, 252, 254), rgb(235, 243, 254), rgb(249, 252, 254));
+                        }
+
+                        .go {
+                            display: flex;
+                            padding-left: 10px;
+                            height: 30px;
+                            line-height: 30px;
+
+                            .item {
+                                flex: 1;
+                                display: flex;
+
+                                .title {
+                                    color: #727272;
+                                    font-weight: bold;
+                                    margin-right: 15px;
+                                }
+
+                                .content {}
+
+                                .size1 {
+                                    font-size: 12px;
+
+                                }
+                            }
+                        }
+
+                        .div {
+                            margin: 10px 0 0 0;
+                            border: 1px rgb(220, 220, 200) solid;
+                            background-image: linear-gradient(to right, rgb(255, 253, 251), rgb(245, 249, 255), rgb(255, 253, 251));
+
+                            .header4 {
+                                font-size: 16px;
+                                text-align: center;
+                                margin: 5px 0 -10px 0;
+                                font-weight: bold;
+                                color: rgb(100, 100, 100);
+                            }
+
+                            .divider {
+                                margin: -15px 0px -15px 0cap;
+                            }
+
+                            .shuju {
+                                padding: 15px;
+
+                                .title {
+                                    color: #bbbbbb;
+                                    margin-right: 20px;
+                                }
+
+                                .item {
+                                    margin-bottom: 5px;
+
+                                    .content {
+                                        // color: rgb(120, 120, 120);
+                                        color: rgb(169, 134, 63);
+                                    }
+                                }
+
+                            }
+
+                            .tip4 {
+                                height: 20px;
+                                // border: 1px red solid;
+                                margin-top: -15px;
+
+                                .text {
+                                    float: right;
+                                    font-size: 11px;
+                                    color: rgb(150, 150, 150);
+                                }
+                            }
+
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}

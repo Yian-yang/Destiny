@@ -1,0 +1,21 @@
+server:
+  port: 9999 # 端口号
+spring:
+  # 环境
+  profiles:
+    active: dev # 开发环境
+  #    active: prop # 生产环境
+  main:
+    banner-mode: off # 关闭SpringBoot控制台logo
+    allow-bean-definition-overriding: true
+    lazy-initialization: true  # 延迟初始化Bean
+
+#---------------------------------------------------------------------------------------------------------------------------------
+
+# SpringBoot启动时的控制台日志
+logging:
+  level:
+    org:
+      springframework:
+        boot:
+          autoconfigure: info

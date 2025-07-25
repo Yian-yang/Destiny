@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 圆体, sans-serif;
+}
+
+html, body {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+//*****************************************************************************
+
+// 路由高亮
+
+// a {
+//   color: rgb(80, 80, 80) !important;
+// }
+
+// .active {
+//   font-weight: bold;
+//   color: rgb(101, 186, 255) !important;
+//   background-color: rgba(255, 255, 255, 0.5);
+// }
+
+// .exact-active {
+//   font-weight: bold;
+//   color: rgb(101, 186, 255)!important;
+//   background-color: rgba(255, 255, 255, 0.5);
+// }
+
+// *****************************************************************************
+
+// 路由切换动画
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0.2s;
+}
+
+//*****************************************************************************
+
+/* 全局页面滚动条 */
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-thumb {
+  border: 0px solid transparent;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  cursor: pointer;
+  background: rgb(191, 191, 191);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #c8c8c8;
+}
+
+::-webkit-scrollbar-corner {
+  background: rgb(191, 191, 191);
+}
+
+// *****************************************************************************
+
+// input输入框
+
+input {
+  outline: none;
+  color: #ffffff;
+  padding-left: 10px;
+  width: 100%;
+  height: 30px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-bottom: 1px #666 solid;
+  transition: .3s;
+  border-radius: 4px;
+}
+
+input::placeholder {
+  color: #999;
+}
+
+input:focus {
+  border-bottom-color: #fff;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+//*****************************************************************************
+
+// 旋转动画
+
+.animation-8s {
+  animation: spin 8s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animation-6s-n {
+  animation: spin6-n 6s linear infinite;
+}
+
+@keyframes spin6-n {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+//*****************************************************************************
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.null {
+  color: rgb(150, 150, 150);
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.jinxuan {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
