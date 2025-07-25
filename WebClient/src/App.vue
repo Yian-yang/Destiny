@@ -58,7 +58,7 @@ export default {
 
 .main-content {
   flex: 1;
-  padding: 80px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
   background-color: #000000;
 }
 

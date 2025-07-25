@@ -7,6 +7,9 @@
     <div class="region">
       <div class="header1">
         ༺༒༻ 八字 ༺༒༻
+        <span class="type">
+          <Tag color="success">命</Tag>
+        </span>
       </div>
       <div class="header2">
         八字的历史起源悠久，可追溯到商周时期的干支纪年法；先秦时期，《易经》等经典为八字命理奠定了哲学基础，阴阳五行思想开始萌芽；
@@ -38,14 +41,7 @@
         <div class="option">
 
           <div class="title">
-            ༺༒༻ 八字 ༺༒༻
-            <span class="type">
-              <Tag
-                color="success"
-              >
-                命
-              </Tag>
-            </span>
+            <!-- 移除多余的八字标题和命图片 -->
           </div>
 
           <div class="item">
@@ -79,6 +75,7 @@
                     :key="item.value"
                     :label="item.label"
                     :value="item.value"
+                    :class="item.value === 0 ? 'leap-non-btn' : 'leap-btn'"
                   />
                 </el-radio-group>
               </div>
@@ -111,6 +108,7 @@
                   <el-radio-button
                     :label="item.label"
                     :value="item.value"
+                    :class="item.value === 1 ? 'sex-male-btn' : 'sex-female-btn'"
                   />
                 </el-radio-group>
               </div>
@@ -129,6 +127,7 @@
                         :key="item.value"
                         :label="item.label"
                         :value="item.value"
+                        :class="item.value === 0 ? 'leap-non-btn' : 'leap-btn'"
                       />
                     </el-radio-group>
                   </div>

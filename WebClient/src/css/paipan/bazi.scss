@@ -1308,3 +1308,17 @@ body {
 .main-content {
     padding-bottom: 120px !important;
 }
+
+.sex-radio-btn .el-radio-button__inner {
+  min-width: 160px !important;
+}
+
+::v-deep(.sex-male-btn) .el-radio-button__inner,
+::v-deep(.sex-female-btn) .el-radio-button__inner {
+  min-width: 160px !important;
+}
+
+::v-deep(.leap-non-btn) .el-radio-button__inner,
+::v-deep(.leap-btn) .el-radio-button__inner {
+  min-width: 160px !important;
+}
