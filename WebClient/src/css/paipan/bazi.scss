@@ -24,8 +24,10 @@ body {
     }
 
     .data {
-        width: 1300px;
+        width: 100%;
         margin: 0 auto;
+        overflow-y: auto;
+        max-height: calc(100vh - 220px);
 
         .nodata {
             display: flex;
@@ -38,13 +40,16 @@ body {
             }
 
             .option {
-                width: 400px;
+                width: 100%;
                 height: 620px;
                 border: none;
                 padding: 10px 15px 10px 15px;
                 text-align: left;
                 background-color: transparent;
                 color: #ffffff;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
 
                 .title {
                     color: #ffffff;
@@ -77,35 +82,57 @@ body {
                         margin: 10px 0 15px 0;
                     }
 
+                    .dateSelectors {
+                        float: left;
+                        margin: 10px 0 15px 0;
+                        display: flex;
+                        gap: 0;
+                    }
+
+                    .dateType, .leapMonth {
+                        margin: 0;
+                    }
+
                     .date {
-                        margin: 65px 0 20px 0;
+                        margin: 30px 0 15px 0;
+                        clear: both;
+                        display: flex;
+                        align-items: center;
+                        gap: 20px; /* 调整此值以控制与时间选择栏的间距 */
+                        flex-wrap: nowrap;
+                        justify-content: center;
+                        max-width: 650px;
+                        width: 100%;
 
                         .el-date-picker {
-                            width: 60% !important;
-                        }
-
-                        .leapMonth {
-                            float: right;
+                            flex: 0 0 200px;
+                            min-width: 200px;
+                            max-width: 200px;
                         }
                     }
 
                     .other {
-                        height: 45px;
+                        height: 40px;
                         display: flex;
-                        float: left;
+                        clear: both;
+                        margin-bottom: 8px;
+                        align-items: center;
+                        justify-content: center;
+                        max-width: 600px;
+                        width: 100%;
 
                         .title {
-                            flex: 1;
+                            flex: 0 0 100px;
                             font-size: 15px;
                             margin: 3px 10px 0px 0px;
                         }
 
-
                         .kuang {
                             flex: 1;
+                            max-width: 400px;
 
                             .select {
-                                width: 290px;
+                                width: 100%;
                             }
                         }
 
@@ -1247,4 +1274,33 @@ body {
             }
         }
     }
+}
+
+// 高级选项样式修改
+.el-collapse {
+    background-color: black;
+    margin-bottom: 20px; // 增加与开始排盘按钮的间距
+}
+
+::v-deep(.el-collapse-item__wrap) {
+    background-color: #000 !important;
+}
+
+.el-collapse .el-collapse-item__wrap {
+    background-color: #000 !important;
+}
+
+::v-deep(.el-collapse-item__header) {
+    background-color: #000 !important;
+    color: #fff !important;
+    border-top: 0 !important;
+    border-bottom: 0 !important;
+    box-shadow: none !important;
+}
+::v-deep(.el-collapse) {
+    border-top: 0 !important;
+}
+
+.main-content {
+    padding-bottom: 120px !important;
 }

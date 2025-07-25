@@ -116,110 +116,114 @@
               </el-radio-group>
             </div>
 
-            <div class="other">
-              <div class="title">
-                节气类型
-              </div>
-              <div class="kuang">
-                <Select
-                  v-model="jieQiType"
-                  class="select"
-                >
-                  <Option
-                    v-for="item in jieQiTypeOptions"
-                    :key="item"
-                    :label="item.label"
-                    :value="item.value"
-                  >
-                    {{ item.label }}
-                  </Option>
-                </Select>
-              </div>
-            </div>
+            <el-collapse>
+              <el-collapse-item title="高级选项" name="1">
+                <div class="other">
+                  <div class="title">
+                    节气类型
+                  </div>
+                  <div class="kuang">
+                    <Select
+                      v-model="jieQiType"
+                      class="select"
+                    >
+                      <Option
+                        v-for="item in jieQiTypeOptions"
+                        :key="item"
+                        :label="item.label"
+                        :value="item.value"
+                      >
+                        {{ item.label }}
+                      </Option>
+                    </Select>
+                  </div>
+                </div>
 
-            <div class="other">
-              <div class="title">
-                排盘类型
-              </div>
-              <div class="kuang">
-                <Select
-                  v-model="paiPanType"
-                  class="select"
-                >
-                  <Option
-                    v-for="item in paiPanTypeOptions"
-                    :key="item"
-                    :label="item.label"
-                    :value="item.value"
-                  >
-                    {{ item.label }}
-                  </Option>
-                </Select>
-              </div>
-            </div>
+                <div class="other">
+                  <div class="title">
+                    排盘类型
+                  </div>
+                  <div class="kuang">
+                    <Select
+                      v-model="paiPanType"
+                      class="select"
+                    >
+                      <Option
+                        v-for="item in paiPanTypeOptions"
+                        :key="item"
+                        :label="item.label"
+                        :value="item.value"
+                      >
+                        {{ item.label }}
+                      </Option>
+                    </Select>
+                  </div>
+                </div>
 
-            <div class="other">
-              <div class="title">
-                年柱类型
-              </div>
-              <div class="kuang">
-                <Select
-                  v-model="yearGanZhiType"
-                  class="select"
-                >
-                  <Option
-                    v-for="item in yearGanZhiTypeOptions"
-                    :key="item"
-                    :label="item.label"
-                    :value="item.value"
-                  >
-                    {{ item.label }}
-                  </Option>
-                </Select>
-              </div>
-            </div>
+                <div class="other">
+                  <div class="title">
+                    年柱类型
+                  </div>
+                  <div class="kuang">
+                    <Select
+                      v-model="yearGanZhiType"
+                      class="select"
+                    >
+                      <Option
+                        v-for="item in yearGanZhiTypeOptions"
+                        :key="item"
+                        :label="item.label"
+                        :value="item.value"
+                      >
+                        {{ item.label }}
+                      </Option>
+                    </Select>
+                  </div>
+                </div>
 
-            <div class="other">
-              <div class="title">
-                月柱类型
-              </div>
-              <div class="kuang">
-                <Select
-                  v-model="monthGanZhiType"
-                  class="select"
-                >
-                  <Option
-                    v-for="item in monthGanZhiTypeOptions"
-                    :key="item"
-                    :label="item.label"
-                    :value="item.value"
-                  >
-                    {{ item.label }}
-                  </Option>
-                </Select>
-              </div>
-            </div>
+                <div class="other">
+                  <div class="title">
+                    月柱类型
+                  </div>
+                  <div class="kuang">
+                    <Select
+                      v-model="monthGanZhiType"
+                      class="select"
+                    >
+                      <Option
+                        v-for="item in monthGanZhiTypeOptions"
+                        :key="item"
+                        :label="item.label"
+                        :value="item.value"
+                      >
+                        {{ item.label }}
+                      </Option>
+                    </Select>
+                  </div>
+                </div>
 
-            <div class="other">
-              <div class="title">
-                日柱类型
-              </div>
-              <div class="kuang">
-                <Select
-                  v-model="dayGanZhiType"
-                  class="select"
-                >
-                  <Option
-                    v-for="item in dayGanZhiTypeOptions"
-                    :key="item"
-                    :label="item.label"
-                    :value="item.value"
-                  >
-                    {{ item.label }}
-                  </Option>
-                </Select>
-              </div>
-            </div>
+                <div class="other">
+                  <div class="title">
+                    日柱类型
+                  </div>
+                  <div class="kuang">
+                    <Select
+                      v-model="dayGanZhiType"
+                      class="select"
+                    >
+                      <Option
+                        v-for="item in dayGanZhiTypeOptions"
+                        :key="item"
+                        :label="item.label"
+                        :value="item.value"
+                      >
+                        {{ item.label }}
+                      </Option>
+                    </Select>
+                  </div>
+                </div>
+              </el-collapse-item>
+            </el-collapse>
 
             <div class="paipan">
               <Button

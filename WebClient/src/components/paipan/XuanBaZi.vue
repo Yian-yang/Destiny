@@ -50,50 +50,18 @@
 
           <div class="item">
 
-            <div class="name">
-              <input
-                placeholder="请输入姓名"
-                v-model="name"
-                maxlength="10"
-              />
-            </div>
-
-            <div class="occupy" style="display: none;">
-              <input
-                placeholder="请输入占事"
-                v-model="occupy"
-                maxlength="10"
-                @click="occupyPrompt"
-              />
-            </div>
-
-            <div class="dateType">
-              <el-radio-group
-                  v-model="dateType"
-                  v-for="item in dateTypeOptions"
-                  :key="item"
-                >
+            <div class="date">
+              <div class="dateType">
+                <el-radio-group v-model="dateType">
                   <el-radio-button
+                    v-for="item in dateTypeOptions"
+                    :key="item.value"
                     :label="item.label"
                     :value="item.value"
                   />
                 </el-radio-group>
-            </div>
-            
-            <div class="sex">
-              <el-radio-group
-                v-model="sex"
-                v-for="item in sexOptions"
-                :key="item"
-              >
-                <el-radio-button
-                  :label="item.label"
-                  :value="item.value"
-                />
-              </el-radio-group>
-            </div>
+              </div>
 
-            <div class="date">
               <el-date-picker
                 :clearable="false"
                 v-model="date"
@@ -101,105 +69,138 @@
                 format="YYYY-MM-DD HH:mm:ss"
                 placeholder="请选择日期和时间"
                 :editable="false"
-                style="width:60%;"
                 @change="getDateGanZhiMethod"
               />
-              <el-radio-group
-                class="leapMonth"
-                v-model="leapMonthType"
-                v-for="item in leapMonthTypeOptions"
-                :key="item"
-              >
-                <el-radio-button
-                  :label="item.label"
-                  :value="item.value"
+              
+              <div class="leapMonth">
+                <el-radio-group v-model="leapMonthType">
+                  <el-radio-button
+                    v-for="item in leapMonthTypeOptions"
+                    :key="item.value"
+                    :label="item.label"
+                    :value="item.value"
+                  />
+                </el-radio-group>
+              </div>
+            </div>
+
+            <div class="other">
+              <div class="title">
+                姓名
+              </div>
+              <div class="kuang">
+                <input
+                  placeholder="请输入姓名"
+                  v-model="name"
+                  maxlength="10"
+                  style="width: 100%; height: 32px; padding: 4px 11px; border: 1px solid #d9d9d9; border-radius: 4px;"
                 />
-              </el-radio-group>
-            </div>
-
-            <div class="other">
-              <div class="title">
-                大运轮数
-              </div>
-              <div class="kuang">
-                <InputNumber
-                  v-model="daYunLunShu"
-                  :min="10"
-                  :max="16"
-                  controls-outside
-                  :editable="false"
-                />
               </div>
             </div>
 
             <div class="other">
               <div class="title">
-                节气类型
+                性别
               </div>
               <div class="kuang">
-                <Select
-                  v-model="jieQiType"
-                  class="select"
+                <el-radio-group
+                  v-model="sex"
+                  v-for="item in sexOptions"
+                  :key="item"
                 >
-                  <Option
-                    v-for="item in jieQiTypeOptions"
-                    :key="item"
+                  <el-radio-button
                     :label="item.label"
                     :value="item.value"
-                  >
-                    {{ item.label }}
-                  </Option>
-                </Select>
+                  />
+                </el-radio-group>
               </div>
             </div>
 
-            <div class="other">
-              <div class="title">
-                起运流派
-              </div>
-              <div class="kuang">
-                <Select
-                  v-model="qiYunLiuPaiType"
-                  class="select"
-                >
-                  <Option
-                    v-for="item in qiYunLiuPaiTypeOptions"
-                    :key="item"
-                    :label="item.label"
-                    :value="item.value"
-                  >
-                    {{ item.label }}
-                  </Option>
-                </Select>
-              </div>
-            </div>
+            <el-collapse>
+              <el-collapse-item title="高级选项" name="1">
+                <div class="other">
+                  <div class="title">
+                    大运轮数
+                  </div>
+                  <div class="kuang">
+                    <InputNumber
+                      v-model="daYunLunShu"
+                      :min="10"
+                      :max="16"
+                      controls-outside
+                      :editable="false"
+                    />
+                  </div>
+                </div>
 
-            <div class="other">
-              <div class="title">
-                人元司令
-              </div>
-              <div class="kuang">
-                <Select
-                  v-model="renYuanType"
-                  class="select"
-                >
-                  <Option
-                    v-for="item in renYuanTypeOptions"
-                    :key="item"
-                    :label="item.label"
-                    :value="item.value"
-                  >
-                    {{ item.label }}
-                  </Option>
-                </Select>
-              </div>
-            </div>
+                <div class="other">
+                  <div class="title">
+                    节气类型
+                  </div>
+                  <div class="kuang">
+                    <Select
+                      v-model="jieQiType"
+                      class="select"
+                    >
+                      <Option
+                        v-for="item in jieQiTypeOptions"
+                        :key="item"
+                        :label="item.label"
+                        :value="item.value"
+                      >
+                        {{ item.label }}
+                      </Option>
+                    </Select>
+                  </div>
+                </div>
 
-            <div class="other">
-              <div class="title">
-                年柱类型
-              </div>
-              <div class="kuang">
+                <div class="other">
+                  <div class="title">
+                    起运流派
+                  </div>
+                  <div class="kuang">
+                    <Select
+                      v-model="qiYunLiuPaiType"
+                      class="select"
+                    >
+                      <Option
+                        v-for="item in qiYunLiuPaiTypeOptions"
+                        :key="item"
+                        :label="item.label"
+                        :value="item.value"
+                      >
+                        {{ item.label }}
+                      </Option>
+                    </Select>
+                  </div>
+                </div>
+
+                <div class="other">
+                  <div class="title">
+                    人元司令
+                  </div>
+                  <div class="kuang">
+                    <Select
+                      v-model="renYuanType"
+                      class="select"
+                    >
+                      <Option
+                        v-for="item in renYuanTypeOptions"
+                        :key="item"
+                        :label="item.label"
+                        :value="item.value"
+                      >
+                        {{ item.label }}
+                      </Option>
+                    </Select>
+                  </div>
+                </div>
+
+                <div class="other">
+                  <div class="title">
+                    年柱类型
+                  </div>
+                  <div class="kuang">
                 <Select
                   v-model="yearGanZhiType"
                   class="select"
@@ -213,50 +214,51 @@
                     {{ item.label }}
                   </Option>
                 </Select>
-              </div>
-            </div>
+                </div>
+                </div>
+                <div class="other">
+                  <div class="title">
+                    月柱类型
+                  </div>
+                  <div class="kuang">
+                    <Select
+                      v-model="monthGanZhiType"
+                      class="select"
+                    >
+                      <Option
+                        v-for="item in monthGanZhiTypeOptions"
+                        :key="item"
+                        :label="item.label"
+                        :value="item.value"
+                      >
+                        {{ item.label }}
+                      </Option>
+                    </Select>
+                  </div>
+                </div>
 
-            <div class="other">
-              <div class="title">
-                月柱类型
-              </div>
-              <div class="kuang">
-                <Select
-                  v-model="monthGanZhiType"
-                  class="select"
-                >
-                  <Option
-                    v-for="item in monthGanZhiTypeOptions"
-                    :key="item"
-                    :label="item.label"
-                    :value="item.value"
-                  >
-                    {{ item.label }}
-                  </Option>
-                </Select>
-              </div>
-            </div>
-
-            <div class="other">
-              <div class="title">
-                日柱类型
-              </div>
-              <div class="kuang">
-                <Select
-                  v-model="dayGanZhiType"
-                  class="select"
-                >
-                  <Option
-                    v-for="item in dayGanZhiTypeOptions"
-                    :key="item"
-                    :label="item.label"
-                    :value="item.value"
-                  >
-                    {{ item.label }}
-                  </Option>
-                </Select>
-              </div>
-            </div>
+                <div class="other">
+                  <div class="title">
+                    日柱类型
+                  </div>
+                  <div class="kuang">
+                    <Select
+                      v-model="dayGanZhiType"
+                      class="select"
+                    >
+                      <Option
+                        v-for="item in dayGanZhiTypeOptions"
+                        :key="item"
+                        :label="item.label"
+                        :value="item.value"
+                      >
+                        {{ item.label }}
+                      </Option>
+                    </Select>
+                  </div>
+                </div>
+              </el-collapse-item>
+            </el-collapse>
 
             <div class="paipan">
               <Button
