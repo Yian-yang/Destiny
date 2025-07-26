@@ -49,7 +49,7 @@ export default {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #000000;
+  background-color: transparent;
 }
 
 .header {
@@ -59,7 +59,7 @@ export default {
 .main-content {
   flex: 1;
   padding: 0px 0px 0px 0px;
-  background-color: #000000;
+  background-color: transparent;
 }
 
 .footer {

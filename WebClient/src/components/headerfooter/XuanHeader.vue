@@ -19,9 +19,9 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 56px;
+  height: 40px;
   padding: 0 48px;
-  background: linear-gradient(90deg, #1a232a 0%, #222b33 60%, #181a1b 100%);
+  background: transparent;
   border-bottom: none;
   box-shadow: none;
   position: relative;

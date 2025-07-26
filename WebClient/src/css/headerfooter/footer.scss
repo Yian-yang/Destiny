@@ -2,24 +2,28 @@
     text-align: center;
     background-color: #000000;
     color: #ffffff;
-    padding: 20px 0;
-    border-top: 1px solid #333;
+    padding: 10px 0; /* 减小padding */
+    border-top: none; /* 去除分割线 */
 
     .footer {
         max-width: 1200px;
         margin: 0 auto;
         padding: 0 20px;
+        display: flex; /* 使用flex布局使内容在一行 */
+        justify-content: space-between; /* 两端对齐 */
+        align-items: center; /* 垂直居中 */
+        flex-wrap: wrap; /* 允许换行 */
 
         .menu {
-            margin-bottom: 10px;
+            margin-bottom: 0; /* 去除底部margin */
             
             .item {
-                margin-right: 20px;
+                margin-right: 15px; /* 减小右边距 */
                 display: inline-block;
 
                 .name {
                     color: #cccccc !important;
-                    font-size: 14px;
+                    font-size: 12px; /* 减小字体大小 */
                     text-decoration: none;
                     transition: color 0.3s ease;
 
@@ -31,7 +35,7 @@
         }
 
         .copy {
-            margin-top: 10px;
+            margin-top: 0; /* 去除顶部margin */
             font-size: 12px;
             color: #666666;
 

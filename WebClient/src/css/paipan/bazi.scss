@@ -6,20 +6,22 @@ body {
 
     .region {
         width: 100%;
-        height: 100px;
+        height: 150px;
         text-align: center;
-        margin-bottom: 10px;
+        margin-top: 150px;
+        margin-bottom: 1px;
         color: #ffffff;
-        background: linear-gradient(to right, #1a1a1a, #2d2d2d, #1a1a1a);
+        background: transparent;
 
         .header1 {
-            font-size: 26px;
+            font-size: 30px;
         }
 
         .header2 {
-            margin-top: 0px;
+            margin-top: 20px;
             font-size: 15px;
             line-height: 30px;
+            background: transparent;
         }
     }
 
@@ -27,13 +29,14 @@ body {
         width: 100%;
         margin: 0 auto;
         overflow-y: auto;
-        max-height: calc(100vh - 220px);
+        // 移除固定的最大高度限制，让容器自适应内容高度
+        // max-height: calc(100vh - 220px);
 
         .nodata {
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 620px;
+            min-height: 150px;
 
             video {
                 display: none;
@@ -41,9 +44,10 @@ body {
 
             .option {
                 width: 100%;
-                height: 620px;
+                // 移除固定高度，让容器根据内容自适应
+                //height: 900px;
                 border: none;
-                padding: 10px 15px 10px 15px;
+                padding: 0px 15px 50px 15px;
                 text-align: left;
                 background-color: transparent;
                 color: #ffffff;
@@ -54,11 +58,11 @@ body {
                 .title {
                     color: #ffffff;
                     font-size: 20px;
-                    margin-bottom: 10px;
+                    margin-bottom: 0px;
 
-                    .type {
-                        float: right;
-                    }
+                    // .type {
+                    //     float: left;
+                    // }
                 }
 
                 .item {
@@ -73,7 +77,7 @@ body {
                     }
 
                     .dateType {
-                        float: left;
+                        float: center;
                         margin: 10px 0 15px 0;
                     }
 
@@ -83,7 +87,7 @@ body {
                     }
 
                     .dateSelectors {
-                        float: left;
+                        float: right;
                         margin: 10px 0 15px 0;
                         display: flex;
                         gap: 0;
@@ -101,11 +105,11 @@ body {
                         margin: 30px 0 15px 0;
                         clear: both;
                         display: flex;
-                        align-items: center;
+                        align-items: right;
                         gap: 20px; /* 调整此值以控制与时间选择栏的间距 */
                         flex-wrap: nowrap;
-                        justify-content: center;
-                        max-width: 650px;
+                        justify-content: right;
+                        max-width: 850px;
                         width: 100%;
 
                         .el-date-picker {
@@ -133,7 +137,7 @@ body {
 
                         .kuang {
                             flex: 1;
-                            max-width: 400px;
+                            max-width: 1000px;
 
                             .select {
                                 width: 100%;
@@ -168,9 +172,9 @@ body {
             }
 
             .data {
-                margin-top: 10px;
+                margin-top: 0px;
 
-                .hrader {
+                .header {
                     width: 100%;
                     border: none;
                     color: white;
@@ -287,7 +291,7 @@ body {
                             float: left;
                             width: 50%;
                             height: 200px;
-                            margin-top: 10px;
+                            margin-top: 0px;
                             padding: 5px;
                             border: 1px rgb(220, 220, 220) solid;
 
@@ -322,7 +326,7 @@ body {
                             float: right;
                             width: 50%;
                             height: 200px;
-                            margin-top: 10px;
+                            margin-top: 0px;
                             padding: 5px;
                             border: 1px rgb(220, 220, 220) solid;
                             border-left: none;
@@ -1306,7 +1310,7 @@ body {
 }
 
 .main-content {
-    padding-bottom: 120px !important;
+    padding-bottom: 60px !important; /* 调整padding以适应更小的footer */
 }
 
 .sex-radio-btn .el-radio-button__inner {
@@ -1321,4 +1325,35 @@ body {
 ::v-deep(.leap-non-btn) .el-radio-button__inner,
 ::v-deep(.leap-btn) .el-radio-button__inner {
   min-width: 160px !important;
+}
+
+::v-deep(.el-date-picker),
+::v-deep(.el-date-editor),
+::v-deep(.el-date-editor .el-input),
+::v-deep(.el-date-editor .el-input__wrapper) {
+  width: 320px !important;
+  min-width: 320px !important;
+  max-width: 320px !important;
+}
+
+/* 解决折叠面板跳动问题 */
+::v-deep(.el-collapse-item__wrap) {
+  transition: height 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+::v-deep(.el-collapse-transition-enter-active),
+::v-deep(.el-collapse-transition-leave-active) {
+  transition: max-height 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+::v-deep(.el-collapse-transition-enter-from),
+::v-deep(.el-collapse-transition-leave-to) {
+  max-height: 0;
+}
+
+::v-deep(.el-collapse-transition-enter-to),
+::v-deep(.el-collapse-transition-leave-from) {
+  max-height: 1000px; /* 根据实际内容调整 */
 }
