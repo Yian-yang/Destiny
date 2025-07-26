@@ -1,15 +1,9 @@
 <h1 align="center" style="text-shadow:3px 3px 5px rgb(220, 220, 220);">
-    排盘项目 - 升级版
+    HuaMyth-Destiny
 </h1>
 <p align="center" style="font-size:15px; background-color:rgb(245, 245, 245);">
-    🔈 无需繁琐配置，即开即用
+    🔈 中国传统文化输出-工具
 </p>
-
-<div align="center">
-
-![paipan](https://xuan-pro.oss-cn-qingdao.aliyuncs.com/video/9c90fe98-d710-4c0b-b23c-07618eced86e.gif)
-
-</div>
 
 ## **一、后端**
 
